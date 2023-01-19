@@ -1,0 +1,25 @@
+/* What Are We Doing */
+
+.section-title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    color: var(--headings-color);
+    text-align: center;
+    margin-bottom: 72px;
+  }
+  
+  .what-are-we-doing.section {
+    padding-top: 0;
+    display: none;
+    @media screen and (min-width: 1200px) {
+      display: block;
+    }
+  
+    .list {
+      display: flex;
+      justify-content: space-between;
+    }
+  }

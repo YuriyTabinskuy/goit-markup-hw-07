@@ -1,0 +1,313 @@
+/* Header */
+
+header {
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
+      0px 1px 6px rgba(46, 47, 66, 0.08);
+    background-color: var(--white-background-color);
+    min-width: 320px;
+  }
+  
+  .logo {
+    display: inline-block;
+    font-family: 'Raleway';
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 1.16;
+  
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--headings-color);
+    text-decoration: none;
+  
+    padding-top: 24px;
+    padding-bottom: 24px;
+    @media screen and (min-width: 1200px) {
+      margin-right: 6.7%;
+      padding: 26px 0;
+      line-height: 1.33;
+    }
+  }
+  
+  .logo .accent {
+    color: var(--primary-brand-color);
+  }
+  
+  .menu-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media screen and (min-width: 1200px) {
+      justify-content: start;
+    }
+  }
+  
+  .menu-btn {
+    display: flex;
+    padding: 0;
+  
+    background-color: transparent;
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
+  }
+  
+  .close-menu-btn {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--accent-color);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+  
+    transition: fill, background-color var(--transition);
+  }
+  
+  .close-menu-btn:hover,
+  .close-menu-btn:focus {
+    fill: var(--white-background-color);
+    background-color: var(--pressed-state-color);
+  }
+  
+  .header-icon {
+    fill: var(--headings-color);
+  }
+  
+  .menu-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    padding: 40px;
+    padding-top: 80px;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--white-background-color);
+    transform: translateX(100%);
+    visibility: hidden;
+    transition: transform var(--transition), visibility var(--transition), opacity var(--transition);
+    flex-direction: column;
+    z-index: 999;
+    &.is-open {
+      display: flex;
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(0);
+    }
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
+    @media screen and (max-width: 319px) {
+      width: 100%;
+    }
+  }
+  
+  .mobile-nav {
+    .item:not(:last-child) {
+      margin-bottom: 40px;
+    }
+    .link {
+      display: inline-block;
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 1.11;
+      letter-spacing: 0.02em;
+      color: var(--headings-color);
+      transition: color var(--transition);
+      &:hover,
+      &:focus {
+        color: var(--pressed-state-color);
+      }
+    }
+    .active-menu {
+      color: var(--pressed-state-color);
+    }
+  }
+  
+  .mobile-contacts {
+    display: block;
+    margin-top: auto;
+    .item:last-child {
+      margin-top: 40px;
+    }
+    .phone {
+      font-weight: 500;
+      // font-size: 36px;
+      font-size: 8.5vw;
+      line-height: 1.11;
+      color: var(--primary-brand-color);
+      @media screen and (min-width: 420px) {
+        font-size: 36px;
+      }
+  
+      @media screen and (max-width: 371px) {
+        font-size: calc(8.1vw + 1px);
+      }
+      @media screen and (max-width: 354px) {
+        font-size: calc(8vw + 1px);
+      }
+      @media screen and (max-width: 342px) {
+        font-size: calc(7.9vw + 1px);
+      }
+      @media screen and (max-width: 329px) {
+        font-size: calc(7.8vw + 1px);
+      }
+      @media screen and (max-width: 320px) {
+        font-size: 25.9px;
+      }
+    }
+  
+    .email {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 1.2;
+      letter-spacing: 0.02em;
+      color: var(--main-text-color);
+    }
+  }
+  
+  .social-menu-list {
+    display: flex;
+    justify-content: space-between;
+    max-width: 333px;
+    // max-width: 94%;
+    // gap: 16%;
+    margin-top: 48px;
+  
+    .social-list-item {
+      min-width: 40px;
+      width: 40px;
+      height: 40px;
+    }
+  }
+  
+  .social-mobile-link {
+    background-color: var(--primary-brand-color);
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+  
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  
+    transition: background-color var(--transition);
+  
+    &:hover,
+    &:focus {
+      background-color: var(--pressed-state-color);
+    }
+  }
+  .social-mobile-icon {
+    fill: var(--light-background-color);
+    width: 24px;
+    height: 24px;
+  }
+  
+  .main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media screen and (min-width: 768px) {
+      justify-content: start;
+    }
+  }
+  
+  .nav-list {
+    // display: flex;
+    margin-left: 77px;
+    display: none;
+    column-gap: 40px;
+    @media screen and (min-width: 768px) {
+      display: flex;
+      margin: 0;
+    }
+  }
+  
+  .nav-link {
+    position: relative;
+    padding: 23px 0;
+    display: block;
+  
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--headings-color);
+    transition: color var(--transition);
+  
+    &:hover,
+    &:focus {
+      color: var(--pressed-state-color);
+    }
+  
+    @media screen and (min-width: 1200px) {
+      padding: 26px 0;
+    }
+  }
+  
+  .active::after {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    content: '';
+    background-color: var(--pressed-state-color);
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+  }
+  
+  .nav-link.active {
+    color: var(--pressed-state-color);
+  }
+  
+  .contacts.list {
+    // display: flex;
+    margin-left: auto;
+    display: none;
+    @media screen and (min-width: 768px) {
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+    }
+  
+    .item:first-child {
+      margin-bottom: 4px;
+      @media screen and (min-width: 1200px) {
+        margin: 0;
+        margin-right: 40px;
+      }
+    }
+  
+    @media screen and (min-width: 1200px) {
+      margin-left: auto;
+      flex-direction: row;
+      .email,
+      .phone {
+        padding: 26px 0;
+      }
+    }
+  }
+  
+  .contacts a {
+    display: block;
+    // padding: 24px 0;
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.04em;
+    color: var(--main-text-color);
+    transition: color var(--transition);
+    &:hover,
+    &:focus {
+      color: var(--pressed-state-color);
+    }
+    @media screen and (min-width: 1200px) {
+      font-size: 16px;
+      line-height: 1.5;
+      letter-spacing: 0.02em;
+    }
+  }
